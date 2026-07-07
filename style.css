@@ -1,0 +1,2143 @@
+/* =====================================================
+   BIM RESPONSE
+   STYLE.CSS
+
+   PARTE 1:
+   BASE + IDENTIDAD VISUAL
+===================================================== */
+
+
+/* ==============================
+   VARIABLES DE MARCA
+============================== */
+
+:root {
+
+    --background: #07111f;
+    --background-soft: #0d1b2e;
+
+    --card: #11243b;
+
+    --primary: #2563eb;
+
+    --secondary: #00c2ff;
+
+    --accent: #f97316;
+
+    --success: #22c55e;
+
+    --text: #f8fafc;
+
+    --text-soft: #b8c4d6;
+
+    --border: rgba(255,255,255,0.08);
+
+    --shadow:
+    0 20px 50px rgba(0,0,0,0.35);
+
+}
+
+
+
+/* ==============================
+   RESET GENERAL
+
+   Quitamos configuraciones
+   automáticas del navegador
+============================== */
+
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+
+body {
+
+    font-family: 'Inter', sans-serif;
+
+    background: var(--background);
+
+    color: var(--text);
+
+    overflow-x: hidden;
+
+}
+
+
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+
+ul {
+
+    list-style: none;
+
+}
+
+
+
+/* ==============================
+   CONTENEDOR GENERAL
+
+   Controla el ancho
+   de todo el sitio
+============================== */
+
+
+.container {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+}
+
+
+
+/* ==============================
+   TITULOS GENERALES
+============================== */
+
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 70px;
+
+}
+
+
+
+.section-title span {
+
+    color: var(--accent);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+}
+
+
+
+.section-title h2 {
+
+    margin-top: 15px;
+
+    font-size: 42px;
+
+    line-height: 1.2;
+
+}
+
+
+
+.section-title p {
+
+    margin: 20px auto;
+
+    max-width: 750px;
+
+    color: var(--text-soft);
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+}
+
+
+
+/* ==============================
+   HEADER / MENU SUPERIOR
+============================== */
+
+
+header {
+
+    position: fixed;
+
+    width: 100%;
+
+    top: 0;
+
+    z-index: 1000;
+
+    backdrop-filter: blur(15px);
+
+    background: rgba(7,17,31,0.75);
+
+    border-bottom:
+    1px solid var(--border);
+
+}
+
+
+
+.navbar {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    height: 85px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+
+.logo h2 {
+
+    font-size: 24px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+}
+
+
+
+.logo h2::after {
+
+    content: ".";
+
+    color: var(--accent);
+
+}
+
+
+
+.nav-links {
+
+    display: flex;
+
+    gap: 35px;
+
+}
+
+
+
+.nav-links a {
+
+    color: var(--text-soft);
+
+    font-size: 15px;
+
+    transition: .3s;
+
+}
+
+
+
+.nav-links a:hover {
+
+    color: white;
+
+}
+
+
+
+/* ==============================
+   BOTÓN DEL MENU
+============================== */
+
+
+.btn-nav {
+
+    background: var(--accent);
+
+    padding: 14px 28px;
+
+    border-radius: 8px;
+
+    font-weight: 700;
+
+    transition: .3s;
+
+}
+
+
+
+.btn-nav:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+    0 10px 30px rgba(249,115,22,.35);
+
+}
+
+
+
+
+/* ==============================
+   BOTONES GENERALES
+============================== */
+
+
+.btn-primary {
+
+    display: inline-block;
+
+    background: var(--accent);
+
+    color:white;
+
+    padding:17px 35px;
+
+    border-radius:10px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+
+
+.btn-primary:hover {
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 15px 40px rgba(249,115,22,.35);
+
+}
+
+
+
+.btn-secondary {
+
+    display:inline-block;
+
+    border:
+    1px solid rgba(255,255,255,.2);
+
+    padding:17px 35px;
+
+    border-radius:10px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+
+.btn-secondary:hover {
+
+    background:white;
+
+    color:#07111f;
+
+}
+
+/* =====================================================
+   BIM RESPONSE
+
+   PARTE 2:
+   HERO SECTION
+===================================================== */
+
+
+/* ==============================
+   HERO PRINCIPAL
+============================== */
+
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        rgba(7,17,31,0.95),
+        rgba(7,17,31,0.60)
+    ),
+
+    url("img/hero.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    overflow: hidden;
+
+}
+
+
+
+/* Luz ambiental del fondo */
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    background: var(--primary);
+
+    filter: blur(180px);
+
+    opacity: .25;
+
+    right: -150px;
+
+    top: 150px;
+
+}
+
+
+
+/* Capa adicional */
+
+.overlay {
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        180deg,
+        transparent,
+        rgba(7,17,31,.80)
+    );
+
+}
+
+
+
+
+/* ==============================
+   CONTENIDO DEL HERO
+============================== */
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width:90%;
+
+    max-width:900px;
+
+    margin-left:8%;
+
+    animation:
+    heroMove 1s ease;
+
+}
+
+
+
+@keyframes heroMove {
+
+
+    from {
+
+        opacity:0;
+
+        transform:
+        translateY(40px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+
+}
+
+
+
+/* ==============================
+   ETIQUETA SUPERIOR
+============================== */
+
+
+.tag {
+
+    display:inline-block;
+
+    padding:
+
+    10px 20px;
+
+
+    background:
+
+    rgba(249,115,22,.12);
+
+
+    border:
+
+    1px solid rgba(249,115,22,.35);
+
+
+    border-radius:
+
+    50px;
+
+
+    color:
+
+    #ffb074;
+
+
+    font-size:
+
+    13px;
+
+
+    font-weight:
+
+    700;
+
+
+    letter-spacing:
+
+    1px;
+
+
+    margin-bottom:
+
+    25px;
+
+
+}
+
+
+
+/* ==============================
+   TITULO PRINCIPAL
+============================== */
+
+
+.hero h1 {
+
+
+    font-size:
+
+    clamp(40px,6vw,68px);
+
+
+    line-height:
+
+    1.05;
+
+
+    font-weight:
+
+    900;
+
+
+    letter-spacing:
+
+    -2px;
+
+
+    margin-bottom:
+
+    25px;
+
+
+}
+
+
+
+/* ==============================
+   SUBTITULO
+============================== */
+
+
+.hero h2 {
+
+
+    font-size:
+
+    clamp(22px,3vw,30px);
+
+
+    font-weight:
+
+    600;
+
+
+    color:
+
+    #dbeafe;
+
+
+    margin-bottom:
+
+    25px;
+
+
+}
+
+
+
+/* ==============================
+   TEXTO DESCRIPTIVO
+============================== */
+
+
+.hero p {
+
+
+    color:
+
+    var(--text-soft);
+
+
+    font-size:
+
+    19px;
+
+
+    line-height:
+
+    1.8;
+
+
+    max-width:
+
+    760px;
+
+
+}
+
+
+
+/* ==============================
+   BOTONES DEL HERO
+============================== */
+
+
+.hero-buttons {
+
+
+    margin-top:
+
+    40px;
+
+
+    display:
+
+    flex;
+
+
+    gap:
+
+    20px;
+
+
+    flex-wrap:
+
+    wrap;
+
+
+}
+
+
+
+/* ==============================
+   EFECTO DE ENTRADA
+============================== */
+
+
+.hero .btn-primary {
+
+
+    animation:
+
+    pulseButton 3s infinite;
+
+
+}
+
+
+
+@keyframes pulseButton {
+
+
+    0% {
+
+        box-shadow:
+
+        0 0 0 0
+        rgba(249,115,22,.45);
+
+    }
+
+
+    70% {
+
+        box-shadow:
+
+        0 0 0 20px
+        rgba(249,115,22,0);
+
+    }
+
+
+    100% {
+
+        box-shadow:
+
+        0 0 0 0
+        rgba(249,115,22,0);
+
+    }
+
+
+}
+
+/* =====================================================
+   BIM RESPONSE
+
+   PARTE 3:
+   SECCIONES INTERNAS
+   CARDS + PROBLEMA + SOLUCIÓN
+===================================================== */
+
+
+
+/* ==============================
+   ESTADÍSTICAS
+============================== */
+
+
+.stats {
+
+    padding:80px 0;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:25px;
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+
+
+.stat-box {
+
+
+    background:
+
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.08),
+        rgba(255,255,255,.02)
+    );
+
+
+    border:
+
+    1px solid var(--border);
+
+
+    padding:35px 25px;
+
+
+    border-radius:18px;
+
+
+    text-align:center;
+
+
+    transition:.4s;
+
+
+    backdrop-filter:blur(10px);
+
+
+}
+
+
+
+.stat-box:hover {
+
+
+    transform:
+
+    translateY(-10px);
+
+
+    border-color:
+
+    rgba(249,115,22,.5);
+
+
+}
+
+
+
+.stat-box i {
+
+
+    font-size:35px;
+
+
+    color:
+
+    var(--accent);
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+.stat-box h3 {
+
+
+    font-size:20px;
+
+
+    margin-bottom:12px;
+
+
+}
+
+
+
+.stat-box p {
+
+
+    color:
+
+    var(--text-soft);
+
+
+    line-height:1.6;
+
+
+}
+
+
+
+
+/* ==============================
+   SECCIÓN PROBLEMA
+============================== */
+
+
+.problem {
+
+
+    padding:
+
+    100px 0;
+
+
+    background:
+
+    var(--background-soft);
+
+
+}
+
+
+
+
+.problem-grid {
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(4,1fr);
+
+
+    gap:25px;
+
+
+}
+
+
+
+.problem-card {
+
+
+    background:
+
+    var(--card);
+
+
+    border:
+
+    1px solid var(--border);
+
+
+    padding:35px 25px;
+
+
+    border-radius:18px;
+
+
+    transition:.4s;
+
+
+}
+
+
+
+.problem-card:hover {
+
+
+    transform:
+
+    translateY(-8px);
+
+
+    box-shadow:
+
+    var(--shadow);
+
+
+}
+
+
+
+
+.problem-card i {
+
+
+    font-size:
+
+    35px;
+
+
+    color:
+
+    var(--accent);
+
+
+    margin-bottom:
+
+    20px;
+
+
+}
+
+
+
+.problem-card h3 {
+
+
+    margin-bottom:
+
+    15px;
+
+
+}
+
+
+
+.problem-card p {
+
+
+    color:
+
+    var(--text-soft);
+
+
+    line-height:
+
+    1.6;
+
+
+}
+
+
+
+
+
+/* ==============================
+   SOLUCIÓN
+============================== */
+
+
+.solution {
+
+
+    padding:
+
+    110px 0;
+
+
+}
+
+
+
+.solution-grid {
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+
+    gap:30px;
+
+
+}
+
+
+
+
+.solution-card {
+
+
+    padding:
+
+    40px 30px;
+
+
+    border-radius:
+
+    20px;
+
+
+    background:
+
+    linear-gradient(
+
+        145deg,
+
+        #11243b,
+
+        #081523
+
+    );
+
+
+    border:
+
+    1px solid var(--border);
+
+
+    transition:.4s;
+
+
+}
+
+
+
+.solution-card:hover {
+
+
+    transform:
+
+    translateY(-10px);
+
+
+}
+
+
+
+.solution-card i {
+
+
+    font-size:
+
+    40px;
+
+
+    color:
+
+    var(--secondary);
+
+
+    margin-bottom:
+
+    25px;
+
+
+}
+
+
+
+
+.solution-card h4 {
+
+
+    font-size:
+
+    22px;
+
+
+    margin-bottom:
+
+    15px;
+
+
+}
+
+
+
+.solution-card p {
+
+
+    color:
+
+    var(--text-soft);
+
+
+    line-height:
+
+    1.7;
+
+
+}
+
+
+
+
+/* ==============================
+   SERVICIOS
+============================== */
+
+
+.services {
+
+
+    padding:
+
+    110px 0;
+
+
+    background:
+
+    var(--background-soft);
+
+
+}
+
+
+
+.services-grid {
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+
+    gap:
+
+    30px;
+
+
+}
+
+
+
+
+.service-card {
+
+
+    background:
+
+    var(--card);
+
+
+    padding:
+
+    35px;
+
+
+    border-radius:
+
+    18px;
+
+
+    border:
+
+    1px solid var(--border);
+
+
+    transition:
+
+    .4s;
+
+
+}
+
+
+
+.service-card:hover {
+
+
+    transform:
+
+    translateY(-10px);
+
+
+    box-shadow:
+
+    var(--shadow);
+
+
+}
+
+
+
+.service-card i {
+
+
+    font-size:
+
+    38px;
+
+
+    color:
+
+    var(--accent);
+
+
+    margin-bottom:
+
+    20px;
+
+
+}
+
+
+
+.service-card h3 {
+
+
+    margin-bottom:
+
+    15px;
+
+
+}
+
+
+
+.service-card p {
+
+
+    color:
+
+    var(--text-soft);
+
+
+    line-height:
+
+    1.6;
+
+
+}
+
+/* =====================================================
+   BIM RESPONSE
+
+   PARTE 4:
+   PROCESO + CASOS + CONTACTO + FOOTER
+===================================================== */
+
+
+
+/* ==============================
+   PROCESO DE TRABAJO
+============================== */
+
+
+.process {
+
+    padding:110px 0;
+
+}
+
+
+
+.timeline {
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(4,1fr);
+
+
+    gap:30px;
+
+
+}
+
+
+
+.step {
+
+
+    position:relative;
+
+
+    background:
+
+    var(--card);
+
+
+    padding:
+
+    35px 25px;
+
+
+    border-radius:
+
+    18px;
+
+
+    border:
+
+    1px solid var(--border);
+
+
+}
+
+
+
+.number {
+
+
+    width:55px;
+
+
+    height:55px;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    border-radius:50%;
+
+
+    background:
+
+    var(--accent);
+
+
+    font-weight:900;
+
+
+    font-size:20px;
+
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+.step h3 {
+
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+.step p {
+
+
+    color:
+
+    var(--text-soft);
+
+
+    line-height:
+
+    1.7;
+
+
+}
+
+
+
+
+/* ==============================
+   CASOS DE USO
+============================== */
+
+
+.cases {
+
+
+    padding:
+
+    110px 0;
+
+
+    background:
+
+    var(--background-soft);
+
+
+}
+
+
+
+.cases-grid {
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+
+    gap:
+
+    30px;
+
+
+}
+
+
+
+.case-card {
+
+
+    padding:
+
+    35px;
+
+
+    background:
+
+    rgba(255,255,255,.04);
+
+
+    border:
+
+    1px solid var(--border);
+
+
+    border-radius:
+
+    18px;
+
+
+    transition:
+
+    .4s;
+
+
+}
+
+
+
+.case-card:hover {
+
+
+    transform:
+
+    translateY(-8px);
+
+
+    background:
+
+    rgba(255,255,255,.07);
+
+
+}
+
+
+
+.case-card h3 {
+
+
+    font-size:
+
+    20px;
+
+
+    margin-bottom:
+
+    15px;
+
+
+}
+
+
+
+.case-card p {
+
+
+    color:
+
+    var(--text-soft);
+
+
+    line-height:
+
+    1.6;
+
+
+}
+
+
+
+
+
+/* ==============================
+   TESTIMONIOS
+============================== */
+
+
+.testimonials {
+
+
+    padding:
+
+    110px 0;
+
+
+}
+
+
+
+.testimonial-grid {
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+
+    gap:
+
+    30px;
+
+
+}
+
+
+
+.testimonial-card {
+
+
+    background:
+
+    var(--card);
+
+
+    padding:
+
+    35px;
+
+
+    border-radius:
+
+    18px;
+
+
+    border:
+
+    1px solid var(--border);
+
+
+}
+
+
+
+.stars {
+
+
+    color:
+
+    #fbbf24;
+
+
+    font-size:
+
+    22px;
+
+
+    margin-bottom:
+
+    20px;
+
+
+}
+
+
+
+.testimonial-card p {
+
+
+    color:
+
+    var(--text-soft);
+
+
+    line-height:
+
+    1.7;
+
+
+    font-style:
+
+    italic;
+
+
+}
+
+
+
+.testimonial-card h4 {
+
+
+    margin-top:
+
+    25px;
+
+
+}
+
+
+
+
+
+/* ==============================
+   FAQ
+============================== */
+
+
+.faq {
+
+
+    padding:
+
+    110px 0;
+
+
+    background:
+
+    var(--background-soft);
+
+
+}
+
+
+
+.faq-container {
+
+
+    max-width:
+
+    850px;
+
+
+    margin:auto;
+
+
+}
+
+
+
+.faq-item {
+
+
+    background:
+
+    var(--card);
+
+
+    padding:
+
+    25px;
+
+
+    margin-bottom:
+
+    20px;
+
+
+    border-radius:
+
+    15px;
+
+
+    border:
+
+    1px solid var(--border);
+
+
+}
+
+
+
+.faq-item h3 {
+
+
+    margin-bottom:
+
+    12px;
+
+
+}
+
+
+
+.faq-item p {
+
+
+    color:
+
+    var(--text-soft);
+
+
+    line-height:
+
+    1.7;
+
+
+}
+
+
+
+
+
+/* ==============================
+   CONTACTO
+============================== */
+
+
+.contact {
+
+
+    padding:
+
+    110px 0;
+
+
+}
+
+
+
+.contact-wrapper {
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    2fr 1fr;
+
+
+    gap:
+
+    50px;
+
+
+}
+
+
+
+.contact form {
+
+
+    display:flex;
+
+
+    flex-direction:
+
+    column;
+
+
+    gap:
+
+    20px;
+
+
+}
+
+
+
+.contact input,
+
+
+.contact textarea,
+
+
+.contact select {
+
+
+    width:
+
+    100%;
+
+
+    padding:
+
+    18px;
+
+
+    background:
+
+    rgba(255,255,255,.05);
+
+
+    border:
+
+    1px solid var(--border);
+
+
+    border-radius:
+
+    10px;
+
+
+    color:
+
+    white;
+
+
+    font-size:
+
+    16px;
+
+
+}
+
+
+
+.contact textarea {
+
+
+    resize:none;
+
+
+}
+
+
+
+.contact button {
+
+
+    padding:
+
+    18px;
+
+
+    border:none;
+
+
+    border-radius:
+
+    10px;
+
+
+    background:
+
+    var(--accent);
+
+
+    color:white;
+
+
+    font-size:
+
+    17px;
+
+
+    font-weight:
+
+    800;
+
+
+    cursor:pointer;
+
+
+    transition:
+
+    .3s;
+
+
+}
+
+
+
+.contact button:hover {
+
+
+    transform:
+
+    translateY(-5px);
+
+
+}
+
+
+
+.contact-info {
+
+
+    background:
+
+    var(--card);
+
+
+    padding:
+
+    35px;
+
+
+    border-radius:
+
+    18px;
+
+
+    border:
+
+    1px solid var(--border);
+
+
+}
+
+
+
+.contact-info p {
+
+
+    color:
+
+    var(--text-soft);
+
+
+    margin-top:
+
+    20px;
+
+
+}
+
+
+
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+
+footer {
+
+
+    background:
+
+    #040b14;
+
+
+    padding:
+
+    50px 0 30px;
+
+
+    border-top:
+
+    1px solid var(--border);
+
+
+    text-align:center;
+
+
+}
+
+
+
+.footer-content h2 {
+
+
+    font-size:
+
+    30px;
+
+
+}
+
+
+
+.footer-content p {
+
+
+    color:
+
+    var(--text-soft);
+
+
+    margin-top:
+
+    10px;
+
+
+}
+
+
+
+.social {
+
+
+    margin-top:
+
+    25px;
+
+
+}
+
+
+
+.social a {
+
+
+    margin:
+
+    0 10px;
+
+
+    font-size:
+
+    22px;
+
+
+    transition:
+
+    .3s;
+
+
+}
+
+
+
+.social a:hover {
+
+
+    color:
+
+    var(--accent);
+
+
+}
+
+
+
+.copyright {
+
+
+    margin-top:
+
+    30px;
+
+
+    color:
+
+    var(--text-soft);
+
+
+    font-size:
+
+    14px;
+
+
+}
